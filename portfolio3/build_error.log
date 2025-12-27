@@ -1,0 +1,39 @@
+﻿
+> portfolio3@1.0.0 build
+> react-scripts build
+
+node.exe : 
+(node:9772) 
+[DEP0176] 
+DeprecationWarning: 
+fs.F_OK is 
+deprecated, use 
+fs.constants.F_OK 
+instead
+At line:1 char:1
++ & "D:\Program 
+Files/node.exe" 
+"D:\Program Files/nod
+e_modules/npm/bin/ 
+...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: ((node:9   
+ 772) [DE...ts.F_    
+OK instead:Strin    
+g) [], RemoteExc    
+eption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+(Use `node 
+--trace-deprecation 
+...` to show where 
+the warning was 
+created)
+Creating an optimized production build...
