@@ -1,0 +1,6 @@
+{
+  "buildCommand": "CI=false npm run build",
+  "outputDirectory": "build",
+  "installCommand": "npm install && chmod +x node_modules/.bin/*",
+  "framework": "create-react-app"
+}
