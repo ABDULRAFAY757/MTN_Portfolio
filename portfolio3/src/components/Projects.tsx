@@ -19,7 +19,7 @@ const Projects: React.FC = () => {
                     </p>
                     <div className="projects-hero__stats">
                         <div className="projects-hero__stat">
-                            <span className="projects-hero__stat-value">{profile.stats.papers}+</span>
+                            <span className="projects-hero__stat-value">{profile.stats.papers}</span>
                             <span className="projects-hero__stat-label">Publications</span>
                         </div>
                         <div className="projects-hero__stat-divider"></div>

@@ -6,7 +6,8 @@ export const profile = {
         "Top 2% Scientist (Stanford Ranking)",
         "Best Researcher: Environmental Policy & Management",
         "Best Teaching Award (2023-2024)",
-        "Active Researcher Award (2021-2022)"
+        "Active Researcher Award (2021-2022)",
+        "Excellence Award 2025"
     ],
     contact: {
         phone: "+966-58-3604603",
@@ -22,9 +23,9 @@ export const profile = {
         awards: "https://civil-engineering-conferences.scifat.com/muhammad-tanveer-environmental-policy-and-management-best-researcher-award-3593/"
     },
     bio: [
-        "I am Dr. Muhammad Tanveer, an Associate Professor at Imam Mohammad Ibn Saud Islamic University and a recognized thought leader in Environmental Policy and Management. Honored as a Top 2% Scientist of the World (Stanford Ranking) and recipient of the Best Researcher Award in Environmental Policy and Management, I am committed to advancing the frontiers of sustainable development through rigorous, high-impact research.",
-        "My academic journey is defined by excellence in both research and education. With a robust scholarly portfolio cited across Google Scholar, Scopus, and Web of Science, I investigate the intersections of leadership, green HR practices, and organizational sustainability. My work not only contributes to theoretical discourse but also offers actionable frameworks for transforming organizational culture.",
-        "Beyond individual research, I am a strategic institutional leader. I have successfully spearheaded international accreditation initiatives (AACSB, NCAAA) and launched forward-thinking academic programs. My mission is to cultivate student-centered learning environments and drive institutional success on a global scale."
+        "I am an award-winning academic and researcher with demonstrated excellence in teaching, research, quality assurance, and academic leadership. I am the recipient of the Best Teaching Award (2023) and the University-Level Excellence Award (2025) at Imam Mohammad Ibn Saud Islamic University (IMSIU), and I am ranked among the Top 2% Scientists in the World (Stanford Ranking). I also received the Global Publication Award (2024) at IMSIU for sustained high-impact scholarly output.",
+        "My research record includes publications with leading international publishers such as Elsevier, Springer, Taylor & Francis, Wiley, Emerald, MDPI, IEEE, and Inderscience, and I have served as Editor of four academic books (Elsevier; IGI Global/Inderscience). My academic leadership includes spearheading the AACSB Eligibility Application, contributing to NCAAA accreditation, and leading key initiatives such as the launch of the Supply Chain Management track and the MBA program upgrade.",
+        "I am actively engaged in postgraduate supervision and mentoring and remain committed to research-informed, student-centered teaching and advancing institutional excellence in globally competitive academic environments."
     ],
     education: [
         {
@@ -65,18 +66,12 @@ export const profile = {
             institution: "Prince Sultan University (PSU)",
             period: "Mar 2020 - Oct 2022",
             location: "Riyadh, Saudi Arabia"
-        },
-        {
-            role: "Faculty Member",
-            institution: "Karachi School of Business & Leadership (KSBL)",
-            period: "Past",
-            location: "Pakistan"
         }
     ],
     stats: {
-        papers: 87,
+        papers: "100+",
         years: "12+",
-        awards: 6
+        awards: "10+"
     },
     keyPublications: [
         {

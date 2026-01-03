@@ -5,6 +5,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import DataInsights from './components/DataInsights';
+import Services from './components/Services';
 import Footer from './components/Footer';
 import './styles/main.css';
 
@@ -31,8 +32,9 @@ const App: React.FC = () => {
         <Switch>
           <Route path="/" exact component={About} />
           <Route path="/projects" component={Projects} />
-          <Route path="/contact" component={Contact} />
+          <Route path="/services" component={Services} />
           <Route path="/insights" component={DataInsights} />
+          <Route path="/contact" component={Contact} />
         </Switch>
         <Footer />
       </div>

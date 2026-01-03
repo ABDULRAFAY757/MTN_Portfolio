@@ -13,45 +13,46 @@ const About: React.FC = () => {
                     <div className="hero__pattern"></div>
                 </div>
                 <div className="hero__container">
-                    <div className="hero__content">
-                        <div className="hero__badges">
-                            {profile.badges.map((badge, index) => (
-                                <span key={index} className="hero__badge">
-                                    <span className="hero__badge-icon">
-                                        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
-                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                        </svg>
+                    <div className="hero__left">
+                        <div className="hero__content">
+                            <div className="hero__badges">
+                                {profile.badges.map((badge, index) => (
+                                    <span key={index} className="hero__badge">
+                                        <span className="hero__badge-icon">
+                                            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                        </span>
+                                        {badge}
                                     </span>
-                                    {badge}
-                                </span>
-                            ))}
+                                ))}
+                            </div>
+                            <h1 className="hero__title">
+                                {profile.name}
+                            </h1>
+                            <div className="hero__roles">
+                                {profile.titles.map((title, index) => (
+                                    <span key={index} className="hero__role">{title}</span>
+                                ))}
+                            </div>
+                            <p className="hero__intro">
+                                {profile.bio[0]}
+                            </p>
+                            <div className="hero__actions">
+                                <a href={profile.links.scholar} target="_blank" rel="noopener noreferrer" className="hero__btn hero__btn--primary">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                                        <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+                                    </svg>
+                                    Google Scholar
+                                </a>
+                                <Link to="/contact" className="hero__btn hero__btn--outline">
+                                    Get in Touch
+                                </Link>
+                            </div>
                         </div>
-                        <h1 className="hero__title">
-                            {profile.name}
-                        </h1>
-                        <div className="hero__roles">
-                            {profile.titles.map((title, index) => (
-                                <span key={index} className="hero__role">{title}</span>
-                            ))}
-                        </div>
-                        <p className="hero__intro">
-                            {profile.bio[0]}
-                        </p>
-                        <div className="hero__actions">
-                            <a href={profile.links.scholar} target="_blank" rel="noopener noreferrer" className="hero__btn hero__btn--primary">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-                                    <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
-                                </svg>
-                                Google Scholar
-                            </a>
-                            <Link to="/contact" className="hero__btn hero__btn--outline">
-                                Get in Touch
-                            </Link>
-                        </div>
-                    </div>
 
-                    {/* Stats Cards */}
-                    <div className="hero__stats">
+                        {/* Stats Cards */}
+                        <div className="hero__stats">
                         <div className="stat-card stat-card--featured">
                             <div className="stat-card__icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -62,7 +63,7 @@ const About: React.FC = () => {
                                     <polyline points="10 9 9 9 8 9"/>
                                 </svg>
                             </div>
-                            <span className="stat-card__value">{profile.stats.papers}+</span>
+                            <span className="stat-card__value">{profile.stats.papers}</span>
                             <span className="stat-card__label">Publications</span>
                         </div>
                         <div className="stat-card">
@@ -85,6 +86,12 @@ const About: React.FC = () => {
                             <span className="stat-card__value">{profile.stats.awards}</span>
                             <span className="stat-card__label">Awards</span>
                         </div>
+                        </div>
+                    </div>
+
+                    {/* Profile Picture */}
+                    <div className="hero__profile-image">
+                        <img src={process.env.PUBLIC_URL + '/profile.jpg'} alt="Dr. Muhammad Tanveer" />
                     </div>
                 </div>
             </section>
@@ -106,10 +113,12 @@ const About: React.FC = () => {
                             <div className="highlight-card">
                                 <h4 className="highlight-card__title">Research Focus</h4>
                                 <ul className="highlight-card__list">
-                                    <li>Environmental Policy & Management</li>
-                                    <li>Green HR Practices</li>
-                                    <li>Sustainable Leadership</li>
-                                    <li>Organizational Sustainability</li>
+                                    <li>Management Sciences</li>
+                                    <li>Human Resource Management</li>
+                                    <li>Sustainability</li>
+                                    <li>Environment Management</li>
+                                    <li>Circular Economy</li>
+                                    <li>Artificial Intelligence</li>
                                 </ul>
                             </div>
                             <div className="highlight-card highlight-card--accent">
@@ -155,6 +164,78 @@ const About: React.FC = () => {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Publication Metrics Section */}
+            <section className="pub-metrics">
+                <div className="pub-metrics__container">
+                    <div className="pub-metrics__header">
+                        <span className="pub-metrics__label">Research Output</span>
+                        <h2 className="pub-metrics__title">Publication Metrics</h2>
+                    </div>
+                    <div className="pub-metrics__grid">
+                        <div className="pub-metric-card pub-metric-card--scopus">
+                            <div className="pub-metric-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </div>
+                            <span className="pub-metric-card__value">87</span>
+                            <span className="pub-metric-card__label">Scopus Indexed</span>
+                            <span className="pub-metric-card__badge">Verified</span>
+                        </div>
+                        <div className="pub-metric-card pub-metric-card--wos">
+                            <div className="pub-metric-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <span className="pub-metric-card__value">58</span>
+                            <span className="pub-metric-card__label">Web of Science</span>
+                            <span className="pub-metric-card__badge">Indexed</span>
+                        </div>
+                        <div className="pub-metric-card pub-metric-card--total">
+                            <div className="pub-metric-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14 2 14 8 20 8"/>
+                                </svg>
+                            </div>
+                            <span className="pub-metric-card__value">100+</span>
+                            <span className="pub-metric-card__label">Total Publications</span>
+                            <span className="pub-metric-card__badge">Growing</span>
+                        </div>
+                        <div className="pub-metric-card pub-metric-card--books">
+                            <div className="pub-metric-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                                </svg>
+                            </div>
+                            <span className="pub-metric-card__value">4</span>
+                            <span className="pub-metric-card__label">Edited Books</span>
+                            <span className="pub-metric-card__badge">Elsevier & IGI</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Publishers Section */}
+            <section className="publishers">
+                <div className="publishers__container">
+                    <h3 className="publishers__title">Published With Leading International Publishers</h3>
+                    <div className="publishers__grid">
+                        <div className="publisher-badge">Elsevier</div>
+                        <div className="publisher-badge">Springer</div>
+                        <div className="publisher-badge">Taylor & Francis</div>
+                        <div className="publisher-badge">Wiley</div>
+                        <div className="publisher-badge">Emerald</div>
+                        <div className="publisher-badge">MDPI</div>
+                        <div className="publisher-badge">IEEE</div>
+                        <div className="publisher-badge">Inderscience</div>
                     </div>
                 </div>
             </section>

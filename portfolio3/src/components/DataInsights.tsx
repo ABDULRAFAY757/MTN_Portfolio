@@ -11,10 +11,12 @@ const DataInsights: React.FC = () => {
 
     // Research areas distribution (simulated based on profile)
     const researchAreas = [
-        { name: 'Green HRM', percentage: 35, color: '#10B981' },
-        { name: 'Sustainable Development', percentage: 28, color: '#3B82F6' },
-        { name: 'Environmental Management', percentage: 22, color: '#8B5CF6' },
-        { name: 'Leadership Studies', percentage: 15, color: '#F59E0B' },
+        { name: 'Management Sciences', percentage: 20, color: '#EF4444' },
+        { name: 'Human Resource Management', percentage: 18, color: '#06B6D4' },
+        { name: 'Sustainability', percentage: 18, color: '#10B981' },
+        { name: 'Environment Management', percentage: 16, color: '#3B82F6' },
+        { name: 'Circular Economy', percentage: 14, color: '#8B5CF6' },
+        { name: 'Artificial Intelligence', percentage: 14, color: '#F59E0B' },
     ];
 
     // Publication timeline (based on key publications)
@@ -34,7 +36,7 @@ const DataInsights: React.FC = () => {
     const impactMetrics = [
         {
             label: 'Total Publications',
-            value: `${totalPublications}+`,
+            value: totalPublications,
             icon: 'publications',
             trend: '+12%',
             trendUp: true
@@ -55,7 +57,7 @@ const DataInsights: React.FC = () => {
         },
         {
             label: 'Key Publications',
-            value: keyPublicationsCount,
+            value: 52,
             icon: 'key',
             trend: 'High Impact',
             trendUp: true
@@ -178,7 +180,7 @@ const DataInsights: React.FC = () => {
                                             );
                                         })}
                                         <text x="100" y="95" textAnchor="middle" className="donut-chart__center-value">
-                                            {totalPublications}+
+                                            {totalPublications}
                                         </text>
                                         <text x="100" y="115" textAnchor="middle" className="donut-chart__center-label">
                                             Publications
@@ -330,8 +332,40 @@ const DataInsights: React.FC = () => {
                                 <span className="recognition-card__stat-label">Worldwide</span>
                             </div>
                             <div className="recognition-card__stat">
-                                <span className="recognition-card__stat-value">{totalPublications}+</span>
-                                <span className="recognition-card__stat-label">Publications</span>
+                                <span className="recognition-card__stat-value">87</span>
+                                <span className="recognition-card__stat-label">Scopus</span>
+                            </div>
+                            <div className="recognition-card__stat">
+                                <span className="recognition-card__stat-value">58</span>
+                                <span className="recognition-card__stat-label">Web of Science</span>
+                            </div>
+                            <div className="recognition-card__stat">
+                                <span className="recognition-card__stat-value">100+</span>
+                                <span className="recognition-card__stat-label">Total Publications</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="recognition-card">
+                        <div className="recognition-card__badge">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                                <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+                            </svg>
+                        </div>
+                        <div className="recognition-card__content">
+                            <h3 className="recognition-card__title">Excellence Award 2025</h3>
+                            <p className="recognition-card__text">
+                                Recognized for outstanding contributions to academic excellence, research impact,
+                                and dedication to advancing knowledge in sustainable development and management.
+                            </p>
+                        </div>
+                        <div className="recognition-card__stats">
+                            <div className="recognition-card__stat">
+                                <span className="recognition-card__stat-value">2025</span>
+                                <span className="recognition-card__stat-label">Year</span>
+                            </div>
+                            <div className="recognition-card__stat">
+                                <span className="recognition-card__stat-value">Excellence</span>
+                                <span className="recognition-card__stat-label">Category</span>
                             </div>
                         </div>
                     </div>
