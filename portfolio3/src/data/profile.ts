@@ -10,9 +10,7 @@ export const profile = {
         "Excellence Award 2025"
     ],
     contact: {
-        phone: "+966-58-3604603",
-        email: "mtnawaz@imamu.edu.sa",
-        altEmail: "cans_tanveer@hotmail.com",
+        email: "cans_tanveer@hotmail.com",
         location: "Riyadh, Saudi Arabia"
     },
     links: {
@@ -35,10 +33,6 @@ export const profile = {
         {
             degree: "Master of Business Administration (MBA)",
             institution: "Binary University, Malaysia"
-        },
-        {
-            degree: "Master of Arts (MA)",
-            institution: "Pakistan"
         }
     ],
     certifications: [
