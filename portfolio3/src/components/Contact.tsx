@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { profile } from '../data/profile';
+import { contactConfig } from '../config/emailjs';
 import './Contact.css';
 
 const Contact: React.FC = () => {
@@ -11,6 +12,7 @@ const Contact: React.FC = () => {
     });
     const [submitted, setSubmitted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [error, setError] = useState('');
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
@@ -20,9 +22,35 @@ const Contact: React.FC = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        setSubmitted(true);
-        setIsSubmitting(false);
+        setError('');
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    access_key: contactConfig.accessKey,
+                    name: formData.name,
+                    email: formData.email,
+                    subject: formData.subject,
+                    message: formData.message,
+                }),
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                setSubmitted(true);
+            } else {
+                setError('Failed to send message. Please try emailing directly.');
+            }
+        } catch (err) {
+            setError('Failed to send message. Please try emailing directly.');
+            console.error('Contact form error:', err);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -141,6 +169,12 @@ const Contact: React.FC = () => {
                             ) : (
                                 <form className="contact-form" onSubmit={handleSubmit}>
                                     <h2 className="contact-form__title">Send a Message</h2>
+
+                                    {error && (
+                                        <div className="contact-form__error">
+                                            {error}
+                                        </div>
+                                    )}
 
                                     <div className="contact-form__row">
                                         <div className="contact-form__group">
